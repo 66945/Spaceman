@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#B3B3B3;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:#808080;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#FFFF00;}
+	.st4{fill:url(#New_Pattern);}
+</style>
+<pattern  width="16" height="15" patternUnits="userSpaceOnUse" id="New_Pattern" viewBox="14.22 -28.3 16 15" style="overflow:visible;">
+	<g>
+		<rect x="14.22" y="-28.3" class="st0" width="16" height="15"/>
+		<g>
+			<rect x="28.01" y="-10.13" transform="matrix(0.7314 0.682 -0.682 0.7314 4.6082 -26.9493)" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="12.01" y="-10.13" transform="matrix(0.7314 0.682 -0.682 0.7314 0.3099 -16.0374)" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="20.01" y="-17.63" transform="matrix(0.7314 0.682 -0.682 0.7314 -2.656 -23.5082)" width="17" height="5"/>
+			<rect x="23.42" y="-13.97" transform="matrix(0.7314 0.682 -0.682 0.7314 0.754 -24.8514)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="4.01" y="-17.63" transform="matrix(0.7314 0.682 -0.682 0.7314 -6.9543 -12.5962)" width="17" height="5"/>
+			<rect x="7.42" y="-13.97" transform="matrix(0.7314 0.682 -0.682 0.7314 -3.5443 -13.9395)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="28.01" y="-25.13" transform="matrix(0.7314 0.682 -0.682 0.7314 -5.6218 -30.979)" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="12.01" y="-25.13" transform="matrix(0.7314 0.682 -0.682 0.7314 -9.9201 -20.0671)" width="17" height="5"/>
+			
+				<rect x="15.42" y="-21.47" transform="matrix(0.7314 0.682 -0.682 0.7314 -6.5101 -21.4103)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			
+				<rect x="-0.58" y="-21.47" transform="matrix(0.7314 0.682 -0.682 0.7314 -10.8085 -10.4983)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="20.01" y="-32.63" transform="matrix(0.7314 0.682 -0.682 0.7314 -12.8859 -27.5379)" width="17" height="5"/>
+			<rect x="23.42" y="-28.97" transform="matrix(0.7314 0.682 -0.682 0.7314 -9.476 -28.8811)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="4.01" y="-32.63" transform="matrix(0.7314 0.682 -0.682 0.7314 -17.1843 -16.6259)" width="17" height="5"/>
+			
+				<rect x="7.42" y="-28.97" transform="matrix(0.7314 0.682 -0.682 0.7314 -13.7743 -17.9692)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			<rect x="15.42" y="-36.47" transform="matrix(0.7314 0.682 -0.682 0.7314 -16.7401 -25.44)" class="st0" width="17" height="5"/>
+		</g>
+		<g>
+			
+				<rect x="-0.58" y="-36.47" transform="matrix(0.7314 0.682 -0.682 0.7314 -21.0385 -14.528)" class="st0" width="17" height="5"/>
+		</g>
+	</g>
+</pattern>
+<g id="Layer_1">
+	<rect x="1" y="1" class="st1" width="62" height="62"/>
+	<circle class="st2" cx="8" cy="8" r="3"/>
+	<circle class="st2" cx="56" cy="8" r="3"/>
+	<circle class="st2" cx="8" cy="56" r="3"/>
+	<circle class="st2" cx="56" cy="56" r="3"/>
+</g>
+<g id="Layer_2">
+	<rect y="1" class="st3" width="64" height="12"/>
+	<rect y="1" class="st4" width="64" height="12"/>
+</g>
+</svg>
