@@ -1,0 +1,182 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Flame.tres" type="Material" id=1]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://graphics/scenery/planet1.png" type="Texture" id=4]
+[ext_resource path="res://graphics/scenery/building.png" type="Texture" id=6]
+[ext_resource path="res://graphics/scenery/rocket.png" type="Texture" id=7]
+[ext_resource path="res://graphics/scenery/planet2.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Start.gd" type="Script" id=10]
+[ext_resource path="res://graphics/fireball.png" type="Texture" id=11]
+[ext_resource path="res://graphics/scenery/landscape.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Stars.gd" type="Script" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 536, 47 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://graphics/fonts/andromeda-font/Andromeda-eR2n.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 104
+outline_size = 2
+font_data = SubResource( 2 )
+
+[sub_resource type="Animation" id=4]
+length = 2.2
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Camera2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 512, -0.25, 0, 0.25, 0, 512, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Camera2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -300, -0.25, 0, 1.52, 0.0409241, 300, -1.02, -5.55231, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=5]
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("rocket:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 92, -0.25, 0, 0.25, 0, 92, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("rocket:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 497.5, -0.25, 0, 0.69, 3.815, -100, 0, 2.89331, 0.0899999, -88.4659 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 92, 260 ), Vector2( 92, 210 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, -300 )
+current = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Stars" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1, 0.6 )
+script = ExtResource( 13 )
+starSeed = 13
+num = 30
+starRange = Rect2( 10, -600, 1004, 900 )
+
+[node name="Planets" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1, 0.8 )
+
+[node name="planet1" type="Sprite" parent="ParallaxBackground/Planets"]
+position = Vector2( 196, 118 )
+texture = ExtResource( 4 )
+
+[node name="planet2" type="Sprite" parent="ParallaxBackground/Planets"]
+position = Vector2( 709, 133 )
+texture = ExtResource( 9 )
+
+[node name="landscape" type="Sprite" parent="."]
+position = Vector2( 0, 475 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="building" type="Sprite" parent="."]
+modulate = Color( 0.454902, 0.454902, 0.454902, 1 )
+position = Vector2( 905, 373 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="building"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="building/StaticBody2D"]
+polygon = PoolVector2Array( 127, -193, -74, -193, -115, -171, -128, -135, 128, -134 )
+one_way_collision = true
+
+[node name="Door" parent="." instance=ExtResource( 2 )]
+position = Vector2( 969.5, 520.5 )
+
+[node name="rocket" type="Sprite" parent="."]
+position = Vector2( 92, 497.5 )
+texture = ExtResource( 7 )
+
+[node name="Flame" type="Particles2D" parent="rocket"]
+show_behind_parent = true
+position = Vector2( -2, 55.5 )
+emitting = false
+amount = 100
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 505, 606 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 92.0
+margin_top = 210.0
+margin_right = 946.0
+margin_bottom = 299.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A SPACE GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 180, 521.5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Move = SubResource( 4 )
+anims/Rocket = SubResource( 5 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

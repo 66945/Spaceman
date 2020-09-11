@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Screen.gd" type="Script" id=1]
+[ext_resource path="res://graphics/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://graphics/fonts/andromeda-font/Andromeda-eR2n.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 104
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -474.5
+margin_top = -278.0
+margin_right = 474.5
+margin_bottom = 278.0
+color = Color( 0.223529, 0, 0.427451, 0.768627 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exitLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 232.0
+margin_top = 32.0
+margin_right = -221.0
+margin_bottom = -524.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 1 )
+text = "press enter to complete"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CodeLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 232.0
+margin_top = 177.0
+margin_right = -232.0
+margin_bottom = -335.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 2 )
+text = "______"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeysLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 310.0
+margin_top = 397.5
+margin_right = -310.0
+margin_bottom = -111.5
+grow_horizontal = 2
+custom_fonts/font = SubResource( 3 )
+text = "abcdefghijklm
+nopqrstuvwxyz"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Control" parent="."]
+margin_left = 18.0
+margin_top = 49.0
+margin_right = 58.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life1" type="ColorRect" parent="Lives"]
+margin_left = 836.0
+margin_top = 275.0
+margin_right = 951.0
+margin_bottom = 315.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life2" type="ColorRect" parent="Lives"]
+margin_left = 836.0
+margin_top = 325.0
+margin_right = 951.0
+margin_bottom = 365.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life3" type="ColorRect" parent="Lives"]
+margin_left = 836.0
+margin_top = 375.0
+margin_right = 951.0
+margin_bottom = 415.0
+
+[node name="Life4" type="ColorRect" parent="Lives"]
+margin_left = 836.0
+margin_top = 425.0
+margin_right = 951.0
+margin_bottom = 465.0
+
+[node name="Life5" type="ColorRect" parent="Lives"]
+margin_left = 836.0
+margin_top = 475.0
+margin_right = 951.0
+margin_bottom = 515.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
